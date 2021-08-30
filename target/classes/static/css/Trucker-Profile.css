@@ -1,0 +1,174 @@
+.buttonMenu{
+	background-color: #464850;
+	border: none;
+	border-bottom: 1px solid lightgrey;
+	color: lightgrey;
+	text-align: left;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.2s;
+	font-family: Arial;
+	width: 200px;
+	height: 50 px;
+} 
+
+.buttonMenu:hover{
+	background-color:grey;
+	color: #FDFCFC;
+}
+
+.buttonMenuWithUndercategory{
+	 background-color: #1870d5;
+  border: none;
+  border-bottom: 1px dashed lightgrey;
+  color: black;
+  text-align: centre;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 50px;
+  border-radius:5%;
+}
+
+.buttonMenuWithUndercategory:hover{
+	background-color:#E0E1E4;
+	color:#	black;
+}
+
+.buttonSecondMenu {
+  background-color: #464850;
+  border: none;
+  border-bottom: 1px dashed lightgrey;
+  color: lightgrey;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 30px;
+}
+
+.buttonSecondMenu:hover {
+  background-color: grey;
+  color: #FDFCFC;
+}
+
+.buttonLastSecondMenu {
+  background-color: #464850;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  color: lightgrey;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 30px;
+}
+
+.buttonLastSecondMenu:hover {
+  background-color: grey;
+  color: #FDFCFC;
+}
+.buttonActivMenu {
+  background-color: #797c88;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  color: lightgrey;
+  text-align: left;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 50px;
+}
+
+.emergency_button{
+	position:absolute;
+	 background-color: #FF0000;
+  border: none;
+  color: lightgrey;
+  text-align: centre;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  left:5px;
+  top:750px;
+  width: 190px;
+  height: 150px;
+  border-radius:25%;
+}
+
+.btn {
+    font-size: large;
+    border-radius: 5px;
+    padding: 30px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: black;
+  }
+
+.btn:hover {
+    text-decoration: underline;
+  }
+  
+.emergency_button:hover{
+	background-color: white;
+	color:red;
+}
+
+.company-name {
+      float: left;
+      margin-left: 15%;
+  }
+
+.company-info {
+      float: right;
+      margin-right: 15%;
+  }
+  
+.container {
+    display: none;
+    justify-content: center;
+  }
+
+.form {   
+    width: 800px;
+    max-width: 80%;
+    box-align: center;
+    margin:auto;
+    border-radius: 5px;
+    border: black;
+    padding: 25px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    background-color:#ffffff;
+    color: black;
+    padding: 10px;
+    font-size: x-large;
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(1,auto);
+	z-index: 9;
+  }
+
+.hide {
+    display: none;
+  }
+
+.field{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 40px;
+   
+  }
+
+
