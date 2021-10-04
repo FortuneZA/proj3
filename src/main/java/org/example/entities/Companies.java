@@ -1,4 +1,4 @@
-package org.example;
+package org.example.entities;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 

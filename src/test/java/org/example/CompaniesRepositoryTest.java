@@ -1,6 +1,9 @@
 package org.example;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.example.entities.Companies;
+import org.example.repository.CompaniesRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -11,7 +14,6 @@ import org.springframework.test.annotation.Rollback;
 
 import javax.persistence.EntityManager;
 
-import static org.junit.jupiter.api.Assertions.*;
 @EnableAutoConfiguration
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)

@@ -1,5 +1,6 @@
-package org.example;
+package org.example.repository;
 
+import org.example.entities.Companies;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.JpaRepository;
