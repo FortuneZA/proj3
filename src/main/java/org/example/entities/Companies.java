@@ -12,19 +12,19 @@ public class Companies {
     @Column(name = "ID", nullable = false, unique = true, length = 245)
     private long id;
 
-    @Column(name = "cName", nullable = false, unique = true, length = 40)
+    @Column(name = "cName", nullable = false, unique = false, length = 40)
     private String cName;
 
-    @Column(name = "password", nullable = false, unique = true, length = 65)
+    @Column(name = "password", nullable = false, unique = false, length = 65)
     private String password;
 
-    @Column(name = "location", nullable = true, unique = true, length = 40)
+    @Column(name = "location", nullable = true, unique = false, length = 40)
     private String location;
 
-    @Column(name = "description", nullable = true, unique = true, length = 245)
+    @Column(name = "description", nullable = true, unique = false, length = 245)
     private String description;
 
-    @Column(name = "contactInfo", nullable = false, unique = true, length = 40)
+    @Column(name = "contactInfo", nullable = false, unique = false, length = 40)
     private String contactInfo;
 
     public long getId() {

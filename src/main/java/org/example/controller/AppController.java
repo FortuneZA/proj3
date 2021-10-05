@@ -13,11 +13,11 @@ public class AppController {
     @Autowired
     private CompaniesRepository repository;
 
-        @GetMapping("/profile")
+        @GetMapping("/company-profile")
         public String view(Model model){
             long bub = 2;
             model.addAttribute("company",repository.getById(bub));
-            return "profile";
+            return "company-profile";
     }
 
     @PostMapping("/process_register")
