@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    <link rel="stylesheet" type="text/css" href="review_form.css">-->
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+        }
+        .logo img {
+            float: left;
+            width: 200px;
+            height: auto;
+            transform: translate(-15%, -20%);
+        }
+
+
+        body{margin:0;}
+         h1{font-size:2em;margin:0.67em 0;
+            color: black;
+            transform: translate(-5%, -10%);
+        }
+
+        h2{
+            color: black;
+            font-size: 46px;
+            position: absolute;
+            transform: translate(50%, -55%);
+            color: #1870d5;
+
+        }
+
+        .heading{
+            color: grey;
+            text-align: center;
+            transform: translate(-23%, 140%);
+            font-size: 16px;
+        }
+
+
+        * {
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+        }
+
+        .page {
+          width: 21cm;
+          min-height: 29.7cm;
+          padding: 2cm;
+          margin: 1cm auto;
+          border: 1px #BEBEBE solid;
+          border-radius: 5px;
+          background: white;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .subpage {
+          padding: 1cm;
+          border: 5px red solid;
+          height: 256mm;
+          outline: 2cm #FFEAEA solid;
+        }
+
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        @media print {
+          .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+          }
+        }
+
+
+
+        body {font-family:Source Sans Pro,Arial;
+          color:#2A2B2A;background:#ECEFF0;}
+
+        select:focus,input:focus,textarea:focus{outline:2px solid #4DA1A9;}
+
+
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          font-family: Arial;
+
+
+        }
+
+        input[type=submit] {
+          background-color: #FF0000;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+          background-color: #FF0000;
+        }
+
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+
+  </style>
+
+    <div class="logo">
+        <img src="Logo3.png"></div>
+
+</head>
+<body>
+
+<div class="review form">
+    <h1 class="heading1">Write a Review for </h1>
+    <h2 class="heading2">Logi Truck</h2>
+</div>
+</div>
+<div class="heading"><strong>Software buyers need your help!</strong> Service reviews help the rest of us make great
+    decisions. Not sure where to start?
+</div>
+
+<div class="book">
+    <div class="page">
+
+
+        <div class="container">
+            <form action="connect.php" , method="POST">
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="province">Province</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="province" name="province" placeholder="Your province name.">
+                    </div>
+                </div>
+
+
+                <label for="sentence1">Pros: What did you like most about this software?</label>
+                <textarea id="sentence1" name="sentence1"
+                          placeholder="What features are most impactful? Is the service easy to use? Was integration with your existing business processes easy? "
+                          style="height:200px"></textarea>
+
+                <label for="sentence2">Cons: What did you like least about this software?</label>
+                <textarea id="sentence2" name="sentence2"
+                          placeholder="Are there features you feel are missing or could be improved? Are there aspects of services that are difficult to use? Was integration with your existing business processes difficult?"
+                          style="height:200px"></textarea>
+
+                <label for="sentence3">Describe your overall experience with Logi Truck</label>
+                <textarea id="sentence3" name="sentence3"
+                          placeholder="What business problems are you solving with LogiTruck? What benefits have you realized?"
+                          style="height:200px"></textarea>
+
+                <label for="sentence4">While using Logi Truck , what alternative services(s) were
+                    considered?(Optional)</label>
+                <textarea id="sentence4" name="sentence4" placeholder="" style="height:200px"></textarea>
+
+                <label for="sentence5">Why did you choose Logi Truck over these alternative
+                    services(s)?(Optional)</label>
+                <textarea id="sentence5" name="sentence5" placeholder="" style="height:200px"></textarea>
+
+                <a href="home.html"><input type="submit" value="Submit"></a>
+            </form>
+        </div>
+
+</body>
+</html>
