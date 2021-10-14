@@ -1,11 +1,8 @@
 package org.example.entities;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
+import javax.persistence.*;
 
 //Author: Mathew Fortuin : 219069514
 //Entity class for TruckDriver
@@ -13,7 +10,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 @EnableAutoConfiguration
 @Entity
-@Table(name = "LogiTruck")
+@Table(name = "Truck Driver")
 
 public class TruckDriver
 
@@ -35,14 +32,14 @@ public class TruckDriver
    @Column(name="Address",nullable = false,unique = false,length =40)
     private String Address;
 
-   @Column(name="Contact Number",nullable = false,unique = false,length =40)
-    private Long ContactNumber;
+   @Column(name="Contact Number",nullable = false,unique = false,length =50)
+    private int ContactNumber;
 
     public TruckDriver() {
 
     }
 
-    protected TruckDriver(long id, String name, String surname, String experience, String address, Long contactNumber) {
+    protected TruckDriver(long id, String name, String surname, String experience, String address, int contactNumber) {
         this.id = id;
        this.Name = name;
         this.Surname = surname;
@@ -71,7 +68,7 @@ public class TruckDriver
         return Address;
     }
 
-    public Long getContactNumber() {
+    public int getContactNumber() {
         return ContactNumber;
     }
 
@@ -95,7 +92,7 @@ public class TruckDriver
         Address = address;
     }
 
-    public void setContactNumber(Long contactNumber) {
+    public void setContactNumber(int contactNumber) {
         ContactNumber = contactNumber;
     }
 }
