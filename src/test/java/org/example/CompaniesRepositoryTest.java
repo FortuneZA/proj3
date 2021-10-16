@@ -2,8 +2,6 @@ package org.example;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.example.entities.Companies;
-import org.example.repository.CompaniesRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

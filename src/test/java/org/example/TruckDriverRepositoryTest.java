@@ -1,8 +1,6 @@
 package org.example;
 
-import org.example.entities.Companies;
 import org.example.entities.TruckDriver;
-import org.example.repository.CompaniesRepository;
 import org.example.repository.TruckDriverRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
