@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <style type="text/css">
@@ -8,35 +9,6 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
   box-sizing: border-box;
 }
-
-
-
-.logo img {
-    float: left;
-    width: 200px;
-    height: auto;
-}
-
-<!--.main {-->
-<!--    max-width: 990px;-->
-<!--    margin: auto;-->
-<!--}-->
- .main{
-		   position:relative;
-		   width: 90%;
-		   height: 450px;
-		   position: fixed;
-		   background-color: black;
-		   }
-
-.title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-}
-
 /* Assign grid instructions to our parent grid container, mobile-first (hide the sidenav) */
 .grid-container {
   display: grid;
@@ -236,31 +208,152 @@ body {
   .main-cards {
     column-count: 2;
   }
+
+  ul.floatingBoxes {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  z-index: 9;
 }
 
-    </style>
-    <script type="text/javascript">
-    const menuIconEl = $('.menu-icon');
-    const sidenavEl = $('.sidenav');
-    const sidenavCloseEl = $('.sidenav__close-icon');
-    // Add and remove provided class names
-    function toggleClassName(el, className) {
-      if (el.hasClass(className)) {
-        el.removeClass(className);
-      } else {
-        el.addClass(className);
-      }
-    }
-    // Open the side nav on click
-    menuIconEl.on('click', function() {
-      toggleClassName(sidenavEl, 'active');
-    });
-    // Close the side nav on click
-    sidenavCloseEl.on('click', function() {
-      toggleClassName(sidenavEl, 'active');
-    });
+ul.floatingBoxes li {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-image: linear-gradient(
+    to left,
+    rgb(201, 131, 3),
+    rgb(162, 27, 167)
+  );
+  opacity: 0.5;
+  bottom: -110rem;
+  animation: anim 25s linear infinite;
+}
 
-    </script>
+ul.floatingBoxes li:nth-child(1) {
+  width: 10rem;
+  height: 10rem;
+  left: 10%;
+  animation-delay: 1s;
+  animation-duration: 15s;
+}
+
+ul.floatingBoxes li:nth-child(2) {
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 20%;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+
+ul.floatingBoxes li:nth-child(3) {
+  width: 5rem;
+  height: 5rem;
+  left: 28%;
+  animation-delay: 3s;
+  animation-duration: 12s;
+}
+
+ul.floatingBoxes li:nth-child(4) {
+  width: 4.5rem;
+  height: 4.5rem;
+  left: 35%;
+  animation-delay: 7s;
+  animation-duration: 10s;
+}
+
+ul.floatingBoxes li:nth-child(5) {
+  width: 6.5rem;
+  height: 6.5rem;
+  left: 43%;
+  animation-delay: 1s;
+  animation-duration: 9s;
+}
+
+ul.floatingBoxes li:nth-child(6) {
+  width: 10rem;
+  height: 10rem;
+  left: 50%;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+ul.floatingBoxes li:nth-child(7) {
+  width: 7rem;
+  height: 7rem;
+  left: 60%;
+  animation-delay: 3s;
+  animation-duration: 13s;
+}
+
+ul.floatingBoxes li:nth-child(8) {
+  width: 6rem;
+  height: 6rem;
+  left: 70%;
+  animation-delay: 1s;
+  animation-duration: 20s;
+}
+
+ul.floatingBoxes li:nth-child(9) {
+  width: 7.5rem;
+  height: 7.5rem;
+  left: 77%;
+  animation-delay: 5s;
+  animation-duration: 16s;
+}
+
+ul.floatingBoxes li:nth-child(10) {
+  width: 9rem;
+  height: 9rem;
+  left: 85%;
+  animation-delay: 3s;
+  animation-duration: 19s;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-125rem) rotate(1360deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
+}
+
+a{
+  color:#fff;
+}
+}
+</style>
+    <script type="text/javascript">
+const menuIconEl = $('.menu-icon');
+const sidenavEl = $('.sidenav');
+const sidenavCloseEl = $('.sidenav__close-icon');
+// Add and remove provided class names
+function toggleClassName(el, className) {
+  if (el.hasClass(className)) {
+    el.removeClass(className);
+  } else {
+    el.addClass(className);
+  }
+}
+// Open the side nav on click
+menuIconEl.on('click', function() {
+  toggleClassName(sidenavEl, 'active');
+});
+// Close the side nav on click
+sidenavCloseEl.on('click', function() {
+  toggleClassName(sidenavEl, 'active');
+});
+</script>
+    <meta charset="ISO-8859-1">
+    <title>Home</title>
 </head>
 <body>
 <div class="grid-container">
@@ -269,13 +362,8 @@ body {
     </div>
 
     <header class="header">
-        <div class="logo">
-            <a href="home.html"><img src="logo2.png"></a>
-            <div class="title">
-                <h1>LOGI<br>TRUCK</h1>
-                <h2>Choose possibility in every route.</h2>
-            </div>
-        </div>
+        <div class="header__search">Search...</div>
+        <div class="header__avatar">Id Image</div>
     </header>
 
     <aside class="sidenav">
@@ -283,17 +371,47 @@ body {
             <i class="fas fa-times sidenav__brand-close"></i>
         </div>
         <ul class="sidenav__list">
-            <li class="sidenav__list-item"><a href="home.html">Home</a></li>
+            <li class="sidenav__list-item">Home</li>
             <li class="sidenav__list-item">Profile</li>
             <li class="sidenav__list-item">Job Listings</li>
             <li class="sidenav__list-item">Navigation</li>
             <li class="sidenav__list-item">Live Tracking</li>
             <li class="sidenav__list-item">Emergency</li>
-            <li class="sidenav__list-item"><a href="trucker-reviews.html">Logi Truck Reviews</a></li>
-            <li class="sidenav__list-item">Contact Details</li>
         </ul>
-
     </aside>
+
+    <main class="main">
+        <div class="main-header">
+            <div class="main-header__heading">Dashboard of CAVEN FERNANDA</div>
+            <div class="main-header__updates">Server Date...</div>
+        </div>
+
+        <div class="main-overview">
+            <div class="overviewcardTask">
+                <div class="overviewcard__icon">Task</div>
+                <div class="overviewcard__info">Overview</div>
+            </div>
+            <div class="overviewcardAnnouncement">
+                <div class="overviewcard__icon">Announcement</div>
+                <div class="overviewcard__info">Overview</div>
+            </div>
+            <div class="overviewcardCalendar">
+                <div class="overviewcard__icon">Calendar Events Today</div>
+                <div class="overviewcard__info">Overview</div>
+            </div>
+        </div>
+
+        <!--   <div class="main-cards">
+           <div class="card">Card</div>
+           <div class="card">Card</div>
+           <div class="card">Card</div>
+         </div>-->
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copyright">&copy;1998 - 2021 Trucker App</div>
+        <div class="footer__signature">Caven fernanda</div>
+    </footer>
 </div>
 </body>
 </html>
