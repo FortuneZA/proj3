@@ -5,7 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Reviews {@Id
+public class Reviews {
+    @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "ID", nullable = false, unique = true, length = 245)
 private long id;
@@ -19,20 +20,9 @@ private long id;
     @Column(name = "province", nullable = true, unique = false, length = 40)
     private String province;
 
-    @Column(name = "pros", nullable = true, unique = false, length = 245)
-    private String pros;
+    @Column(name = "overall", nullable = true, unique = false, length = 245)
+    private String overall;
 
-    @Column(name = "cons", nullable = false, unique = false, length = 245)
-    private String cons;
-
-    @Column(name = "description1", nullable = true, unique = false, length = 245)
-    private String description1;
-
-    @Column(name = "description1", nullable = false, unique = false, length = 245)
-    private String description2;
-
-    @Column(name = "description3", nullable = true, unique = false, length = 245)
-    private String description3;
 
     public long getId() {
         return id;
@@ -66,44 +56,14 @@ private long id;
         this.province = province;
     }
 
-    public String getPros() {
-        return pros;
+    public String getOverall() {
+        return overall;
     }
 
-    public void setPros(String pros) {
-        this.pros = pros;
+    public void setOverall(String overall) {
+        this.overall = overall;
     }
 
-    public String getCons() {
-        return cons;
-    }
 
-    public void setCons(String cons) {
-        this.cons = cons;
-    }
-
-    public String getDescription1() {
-        return description1;
-    }
-
-    public void setDescription1(String description1) {
-        this.description1 = description1;
-    }
-
-    public String getDescription2() {
-        return description2;
-    }
-
-    public void setDescription2(String description2) {
-        this.description2 = description2;
-    }
-
-    public String getDescription3() {
-        return description3;
-    }
-
-    public void setDescription3(String description3) {
-        this.description3 = description3;
-    }
 
 }
