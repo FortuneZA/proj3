@@ -1,15 +1,17 @@
 package org.example.entities;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
+import javax.persistence.*;
+
+@EnableAutoConfiguration
+@Entity
+@Table(name = "reviews")
 public class Reviews {
     @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "ID", nullable = false, unique = true, length = 245)
-private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID", nullable = false, unique = true, length = 245)
+    private long id;
 
     @Column(name = "first-name", nullable = false, unique = false, length = 40)
     private String firstName;

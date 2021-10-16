@@ -292,30 +292,36 @@ a.ssolink {
       <div class="formbg-outer">
         <div class="formbg">
           <div class="formbg-inner padding-horizontal--48">
-            <span class="padding-bottom--15">Sign in to your account</span>
+            <span class="padding-bottom--15">Sign Up</span>
+            <form th:action="@{/save-company}" method="post" th:object="${company}" id="stripe-login">
 
-            <form th:action="@{/createCompany}" method="post" th:object="${company}">
-              <label for="companyName">Comapny name:</label>
-              <input type="text" id="companyName" name="companyName" value="" th:field="*{cName}">
+              <div class="field padding-bottom--24">
+                <label for="companyName">Username</label>
+                <input type="text" id="companyName" name="companyName" value="" th:field="*{cName}">
+              </div>
 
+              <div class="field padding-bottom--24">
+                <div class="grid--50-50">
+                  <label for="password">Password</label>
+                </div>
+                <input type="password" id="password" name="fname" value="" th:field="*{password}">
+              </div>
 
+              <div class="field padding-bottom--24">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="fname" value="" th:field="*{location}">
+              </div>
 
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="fname" value="" th:field="*{password}">
+              <div class="field padding-bottom--24">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="fname" value="" th:field="*{description}">
+              </div>
 
+              <div class="field padding-bottom--24">
+                <label for="contactInfo">Contact Info</label>
+                <input type="text" id="contactInfo" name="fname" value="" th:field="*{contactInfo}">
+              </div>
 
-
-              <label for="Location">Location:</label>
-              <input type="text" id="location" name="fname" value="" th:field="*{location}">
-
-
-              <label for="Description">Description:</label>
-              <input type="text" id="description" name="fname" value="" th:field="*{description}">
-
-
-
-              <label for="ContactInfo">Contact Info:</label>
-              <input type="text" id="contactInfo" name="fname" value="" th:field="*{contactInfo}">
               <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                 <!--<label for="checkbox">
                   <input type="checkbox" name="checkbox"> Remember Me
@@ -324,9 +330,6 @@ a.ssolink {
               <div class="field padding-bottom--24">
                 <input type="submit" name="submit" value="Continue">
                 <button class="field padding-bottom--24">Return Home</button>
-              </div>
-              <div class="field">
-                <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
               </div>
             </form>
           </div>

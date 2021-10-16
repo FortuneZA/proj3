@@ -1,7 +1,8 @@
 package org.example.controller;
 
 import org.example.entities.TruckDriver;
-import org.example.repository.TruckDriverRepository;
+import org.example.repository.iTruckDriverRepository;
+import org.example.repository.iTruckDriverRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,12 +13,12 @@ import org.springframework.web.bind.annotation.*;
 public class TruckDriverController {
 
     @Autowired
-    private TruckDriverRepository repository;
+    private iTruckDriverRepository repository;
 
     @GetMapping("/TruckerProfile")
     public String view(Model model){
         long idno = 2;
-        model.addAttribute("truck driver",repository.getAll());
+        model.addAttribute("truck driver",repository);
         return "trucker-profile";
     }
     @PostMapping("/TruckerProfile")

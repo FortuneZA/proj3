@@ -3,46 +3,45 @@ package org.example.entities;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import javax.persistence.*;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 //Author: Mathew Fortuin : 219069514
 //Entity class for TruckDriver
 //Date: 12/Oct/2021
 
 @EnableAutoConfiguration
 @Entity
-@Table(name = "Truck Driver")
-
-public class TruckDriver
-
-{
+@Table(name = "truckdriver")
+public class TruckDriver {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID",nullable = false,unique = true,length =15)
-    private long id;
+   @Column(name = "ID", nullable = false,unique = true)
+   private long id;
 
-   @Column(name = "Name", nullable = false,unique = false,length =40)
-    private String Name;
+   @Column(name = "Name", nullable = true, unique = false)
+   private String Name;
 
-   @Column(name = "Surname",nullable = false,unique = false,length =40)
-    private String Surname;
+   @Column(name = "Surname", nullable = true, unique = false)
+   private String Surname;
 
-   @Column(name ="Experience",nullable=false,unique = false, length = 40)
-    private String Experience;
+   @Column(name ="Experience", nullable=true, unique = false)
+   private String Experience;
 
-   @Column(name="Address",nullable = false,unique = false,length =40)
-    private String Address;
+   @Column(name="Address", nullable = true, unique = false)
+   private String Address;
 
-   @Column(name="Contact Number",nullable = false,unique = false,length =50)
-    private int ContactNumber;
+   @Column(name="Contact_Number", nullable = true, unique = false)
+   private String ContactNumber;
+
+   @Column(name = "email_address", nullable = false, unique = false)
+   private String emailAddress;
+
+   @Column(name = "password", nullable = false, unique = false)
+   private String password;
 
     public TruckDriver() {
 
     }
 
-    protected TruckDriver(long id, String name, String surname, String experience, String address, int contactNumber) {
+    protected TruckDriver(long id, String name, String surname, String experience, String address, String contactNumber) {
         this.id = id;
        this.Name = name;
         this.Surname = surname;
@@ -71,7 +70,7 @@ public class TruckDriver
         return Address;
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return ContactNumber;
     }
 
@@ -95,7 +94,23 @@ public class TruckDriver
         Address = address;
     }
 
-    public void setContactNumber(int contactNumber) {
+    public void setContactNumber(String contactNumber) {
         ContactNumber = contactNumber;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

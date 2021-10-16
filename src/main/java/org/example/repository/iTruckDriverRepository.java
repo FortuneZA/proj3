@@ -13,7 +13,7 @@ import java.util.Set;
 @EnableAutoConfiguration
 @Repository
 public interface iTruckDriverRepository extends JpaRepository<TruckDriver,Long> {
-
-
-
+    TruckDriver findByemailAddress(String emailAdress);
+    Boolean existsByemailAddress(String emailAdress);
+    Boolean existsBypassword(String password);
 }
