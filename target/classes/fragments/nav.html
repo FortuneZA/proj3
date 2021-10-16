@@ -1,0 +1,166 @@
+<style type="text/css">
+.sidenav {
+grid-area: sidenav;
+display: flex;
+flex-direction: column;
+height: 100%;
+width: 240px;
+position: fixed;
+overflow-y: auto;
+transform: translateX(-245px);
+transition: all .6s ease-in-out;
+box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+z-index: 2; /* Needs to sit above the hamburger menu icon */
+background-color: #394263;
+
+}
+.sidenav.active {
+transform: translateX(0);
+}
+.sidenav__close-icon {
+position: absolute;
+visibility: visible;
+top: 8px;
+right: 12px;
+cursor: pointer;
+font-size: 20px;
+color: #ddd;
+}
+.sidenav__list {
+padding: 0;
+margin-top: 85px;
+list-style-type: none;
+}
+.sidenav__list a:visited{
+
+color: white;
+border-bottom: none;
+}
+.sidenav__list-item {
+padding: 20px 20px 20px 40px;
+color: #ddd;
+}
+.sidenav__list-item:hover {
+-webkit-transition-timing-function: ease-out;
+transition-timing-function: ease-out;
+background-color: rgba(255, 255, 255, 0.2);
+cursor: pointer;
+}
+
+ul.floatingBoxes {
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+list-style: none;
+z-index: 9;
+}
+
+ul.floatingBoxes li {
+position: absolute;
+width: 2rem;
+height: 2rem;
+background-image: linear-gradient(
+to left,
+rgb(201, 131, 3),
+rgb(162, 27, 167)
+);
+opacity: 0.5;
+bottom: -110rem;
+animation: anim 25s linear infinite;
+}
+
+ul.floatingBoxes li:nth-child(1) {
+width: 10rem;
+height: 10rem;
+left: 10%;
+animation-delay: 1s;
+animation-duration: 15s;
+}
+
+ul.floatingBoxes li:nth-child(2) {
+width: 3.5rem;
+height: 3.5rem;
+left: 20%;
+animation-delay: 4s;
+animation-duration: 15s;
+}
+
+ul.floatingBoxes li:nth-child(3) {
+width: 5rem;
+height: 5rem;
+left: 28%;
+animation-delay: 3s;
+animation-duration: 12s;
+}
+
+ul.floatingBoxes li:nth-child(4) {
+width: 4.5rem;
+height: 4.5rem;
+left: 35%;
+animation-delay: 7s;
+animation-duration: 10s;
+}
+
+ul.floatingBoxes li:nth-child(5) {
+width: 6.5rem;
+height: 6.5rem;
+left: 43%;
+animation-delay: 1s;
+animation-duration: 9s;
+}
+
+ul.floatingBoxes li:nth-child(6) {
+width: 10rem;
+height: 10rem;
+left: 50%;
+animation-delay: 0s;
+animation-duration: 8s;
+}
+
+ul.floatingBoxes li:nth-child(7) {
+width: 7rem;
+height: 7rem;
+left: 60%;
+animation-delay: 3s;
+animation-duration: 13s;
+}
+
+ul.floatingBoxes li:nth-child(8) {
+width: 6rem;
+height: 6rem;
+left: 70%;
+animation-delay: 1s;
+animation-duration: 20s;
+}
+
+ul.floatingBoxes li:nth-child(9) {
+width: 7.5rem;
+height: 7.5rem;
+left: 77%;
+animation-delay: 5s;
+animation-duration: 16s;
+}
+
+ul.floatingBoxes li:nth-child(10) {
+width: 9rem;
+height: 9rem;
+left: 85%;
+animation-delay: 3s;
+animation-duration: 19s;
+}
+</style>
+<aside class="sidenav">
+    <div class="sidenav__close-icon">
+        <i class="fas fa-times sidenav__brand-close"></i>
+    </div>
+    <ul class="sidenav__list">
+        <li class="sidenav__list-item">Home</li>
+        <li class="sidenav__list-item">Profile</li>
+        <li class="sidenav__list-item">Job Listings</li>
+        <li class="sidenav__list-item">Navigation</li>
+        <li class="sidenav__list-item">Live Tracking</li>
+        <li class="sidenav__list-item">Emergency</li>
+    </ul>
+</aside>
