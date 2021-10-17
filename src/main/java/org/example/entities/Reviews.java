@@ -13,10 +13,10 @@ public class Reviews {
     @Column(name = "ID", nullable = false, unique = true, length = 245)
     private long id;
 
-    @Column(name = "first-name", nullable = false, unique = false, length = 40)
+    @Column(name = "firstName", nullable = false, unique = false, length = 40)
     private String firstName;
 
-    @Column(name = "last-name", nullable = false, unique = false, length = 65)
+    @Column(name = "lastName", nullable = false, unique = false, length = 65)
     private String lastName;
 
     @Column(name = "province", nullable = true, unique = false, length = 40)

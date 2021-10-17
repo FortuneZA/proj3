@@ -1,5 +1,4 @@
-
-<html>
+gg<html>
 <head>
 
     <script src ="Trucker-Profile.js"></script>
@@ -310,7 +309,7 @@
             position: absolute;
             top:20%;
             left:65%;
-font-family: Arial, Helvetica, sans;
+            font-family: Arial, Helvetica, sans;
             width:250px;
             height:300px;
             color: #E0E1E4;
@@ -355,7 +354,7 @@ font-family: Arial, Helvetica, sans;
         }
 
         .New_driver:hover{
-         background-color: #249225;
+            background-color: #249225;
         }
 
         .Delete_driver:hover{
@@ -466,11 +465,11 @@ font-family: Arial, Helvetica, sans;
     <br/>
     <br/>
     <br/>
-    <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Navigation</h3></a></button>
+    <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Reviews</h3></a></button>
     <br/>
     <br/>
     <br/>
-    <button onclick="Live_Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Live Tracking</h3></a></button>
+    <button onclick="Live_Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Sign in</h3></a></button>
     <br/>
     <br/>
     <br/>
@@ -502,17 +501,17 @@ font-family: Arial, Helvetica, sans;
     <br/>
     <br/>
     <br/>
-<div class ="Driver_Details">
+    <div class ="Driver_Details">
 
-    <p><b>Address:</b><i>  14A Hamperfield</i></p>
-    <p><b>Contact #:</b><i>  +27 78680 7201</i></p>
-    <p><b>Experience:</b><i>  Intermediate</i></p>
-    <p><b>Verified:</b> <img height="20px" width="20px" src="../resources/static/images/tick.jfif">
+        <p><b>Address:</b><i>  14A Hamperfield</i></p>
+        <p><b>Contact #:</b><i>  +27 78680 7201</i></p>
+        <p><b>Experience:</b><i>  Intermediate</i></p>
+        <p><b>Verified:</b> <img height="20px" width="20px" src="../resources/static/images/tick.jfif">
 
-</div>
+    </div>
     <p class ="Online"><b>Online: </b></p>
 
-<button onclick="openForm()" class ="New_driver">New Driver</button>
+    <button onclick="openForm()" class ="New_driver">New Driver</button>
     <button onclick="delete_driver()" class ="Delete_driver">Delete Driver</button>
     <button onclick="" class ="Edit_driver">Edit Driver</button>
 
@@ -523,11 +522,11 @@ font-family: Arial, Helvetica, sans;
             <label for="text"><b>Identification Number</b></label>
             <input type="text" placeholder=ID#" name="name" required>
 
-<!--            <label for="text"><b>Contact #</b></label>-->
-<!--            <input type="text" placeholder="Enter #" name="number" required>-->
+            <!--            <label for="text"><b>Contact #</b></label>-->
+            <!--            <input type="text" placeholder="Enter #" name="number" required>-->
 
-<!--            <label for="text"><b>Address</b></label>-->
-<!--            <input type="text" placeholder="Enter address" name="address" required>-->
+            <!--            <label for="text"><b>Address</b></label>-->
+            <!--            <input type="text" placeholder="Enter address" name="address" required>-->
 
 
 
@@ -536,25 +535,25 @@ font-family: Arial, Helvetica, sans;
         </form>
     </div>
 
-<!--    <div class="form-popup2" id="myForm2">-->
-<!--        <form action="/action_page.php" class="form-container">-->
-<!--            <h1>Edit Driver</h1>-->
+    <!--    <div class="form-popup2" id="myForm2">-->
+    <!--        <form action="/action_page.php" class="form-container">-->
+    <!--            <h1>Edit Driver</h1>-->
 
-<!--            <label for="text"><b>Name</b></label>-->
-<!--            <input type="text" value="John" name="name" required>-->
+    <!--            <label for="text"><b>Name</b></label>-->
+    <!--            <input type="text" value="John" name="name" required>-->
 
-<!--            &lt;!&ndash;            <label for="text"><b>Contact #</b></label>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <input type="text" placeholder="Enter #" name="number" required>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <label for="text"><b>Contact #</b></label>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <input type="text" placeholder="Enter #" name="number" required>&ndash;&gt;-->
 
-<!--            &lt;!&ndash;            <label for="text"><b>Address</b></label>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <input type="text" placeholder="Enter address" name="address" required>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <label for="text"><b>Address</b></label>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <input type="text" placeholder="Enter address" name="address" required>&ndash;&gt;-->
 
 
 
-<!--            <button type="submit" class="btn">Create</button>-->
-<!--            <button type="button" class="btn cancel" onclick="closeForm2()">Cancel</button>-->
-<!--        </form>-->
-<!--    </div>-->
+    <!--            <button type="submit" class="btn">Create</button>-->
+    <!--            <button type="button" class="btn cancel" onclick="closeForm2()">Cancel</button>-->
+    <!--        </form>-->
+    <!--    </div>-->
 
 
     <div class = "switch_div">
@@ -675,23 +674,23 @@ font-family: Arial, Helvetica, sans;
 <script type="text/javascript">
 
 
-        function openForm() {
+    function openForm() {
         document.getElementById("myForm").style.display = "block";
     }
 
-        function closeForm() {
+    function closeForm() {
         document.getElementById("myForm").style.display = "NONE";
     }
-        function openForm2() {
-            document.getElementById("myForm").style.display = "block";
-        }
+    function openForm2() {
+        document.getElementById("myForm").style.display = "block";
+    }
 
-        function closeForm2() {
-            document.getElementById("myForm").style.display = "NONE";
-        }
+    function closeForm2() {
+        document.getElementById("myForm").style.display = "NONE";
+    }
 
     function delete_driver(){
-      window.confirm("Are you sure you want to delete current driver ?");
+        window.confirm("Are you sure you want to delete current driver ?");
     }
 
 
@@ -701,4 +700,3 @@ font-family: Arial, Helvetica, sans;
 
 
 </html>
-
