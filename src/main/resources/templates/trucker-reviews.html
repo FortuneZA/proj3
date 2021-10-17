@@ -10,43 +10,134 @@
 		   font-family:"Lato,sans-serif;
 		   }
 
-		   .sidenav{
-		   height: 100% ;
-		   width: 200px;
-		   position: fixed;
-		   z-index: 1;
-		   top: 0;
-		   left: 0;
-		   background-color: #1870d5;
-		   overflow-x: hidden;
-		   padding-top:20px;
+		.sidenav{
+height: 100% ;
+width: 200px;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #1870d5;
+overflow-x: hidden;
+padding-top:20px;
+float:left;
+}
 
-		   }
+.sidenav default{
+padding:6px 8px 6px 16px;
+font-size:25px;
+color:#818181;
+display:block;
+border-radius: 50%;
+}
 
-		   .sidenav default{
-		   padding:6px 8px 6px 16px;
-		   font-size:25px;
-		   color:#818181;
-		   display:block;
-		   border-radius: 50%;
-		   }
+.sidenav deafult:hover {color:#FDFCFC;}
+.buttonMenu{
+	background-color: #464850;
+	border: none;
+	border-bottom: 1px solid lightgrey;
+	color: lightgrey;
+	text-align: left;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.2s;
+	font-family: Arial;
+	width: 200px;
+	height: 50 px;
+}
 
-		   .sidenav deafult:hover {color:#FDFCFC;}
+.buttonMenu:hover{
+	background-color:grey;
+	color: #FDFCFC;
+}
 
-		   .main {
-		   margin-left:200px;
-		   font-size:20px;
-		   padding:0px 0px;
-		   }
+.buttonMenuWithUndercategory{
+	 background-color: #1870d5;
+  border: none;
+  border-bottom: 1px dashed lightgrey;
+  color: black;
+  text-align: centre;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 50px;
+  border-radius:5%;
+}
 
-		   @media screen and (max-height: 450px) {
-		   .sidenav {
-		   padding-top:15px;
-		   }
-		   .sidenav default {
-		   font-size: 18px;
-		   }
-		   }
+.buttonMenuWithUndercategory:hover{
+	background-color:#E0E1E4;
+	color:#	black;
+}
+
+.buttonSecondMenu {
+  background-color: #464850;
+  border: none;
+  border-bottom: 1px dashed lightgrey;
+  color: lightgrey;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 30px;
+}
+
+.buttonSecondMenu:hover {
+  background-color: grey;
+  color: #FDFCFC;
+}
+
+.buttonLastSecondMenu {
+  background-color: #464850;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  color: lightgrey;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 30px;
+}
+
+.buttonLastSecondMenu:hover {
+  background-color: grey;
+  color: #FDFCFC;
+}
+.buttonActivMenu {
+  background-color: #797c88;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  color: lightgrey;
+  text-align: left;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 50px;
+}
+
+.emergency_button{
+  position:absolute;
+  background-color: #FF0000;
+  border: none;
+  color: lightgrey;
+  text-align: centre;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  left:5px;
+  top:750px;
+  width: 190px;
+  height: 150px;
+  border-radius:25%;
+}
 
 <!--		   .main{-->
 <!--		   position:relative;-->
@@ -107,7 +198,6 @@ h2 {
     background-color: #FF0000;
   }
 .user-profile {
-    float: left;
     width: 200px;
     height: auto;
     transform: translate(110%,-105%);
@@ -124,35 +214,34 @@ p {
     font-size: 22px;
     font-weight: bold;
     font-style: italic;
-    transform: translate(4%,-0%);
+    transform: translate(18%,-900%);
 }
 .seven{
     color: #BEBEBE;
     font-size: 22px;
     font-weight: bold;
     font-style: italic;
-    transform: translate(4%,-100%);
+    transform: translate(18%,-890%);
 }
 .eight{
     color: #BEBEBE;
     font-size: 16px;
-    transform: translate(4%,-200%);
+    transform: translate(18%,-1290%);
 }
 .nine{
     color: black;
     font-size: 24px;
     text-align: right;
-    transform: translate(-15%,-1400%);
+    transform: translate(-15%,-2200%);
 }
 
-.ten{
+ .ten{
     color: black;
     font-size: 18px;
-
-
+    text-align: justify;
 	width:100%;
-   transform: translate(67%,-350%);
-}
+    transform: translate(66%,-285%);
+    }
 
 .rate {
     margin: auto;
@@ -203,38 +292,35 @@ p {
 </head>
 
 <body>
-<div class ="sidenav">
-    <a href ="file:///C:/Users/mathe/Documents/CPUT%202021/PROJ/TERM%203/WEBSITE/Trucker-Profile.html">
-        <img src ="../images/System Logo FINAL.jpeg" width =200px height =200px>
-    </a>
-    <br/>
-    <br/>
-    <button onclick ="Trucker-Profile_Link()" class ="buttonMenuWithUndercategory"><h3>Profile</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick="JobListings_Link()" class="buttonMenuWithUndercategory"><h3>Job Listings</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Navigation</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick="Live Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Live Tracking</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+<div th:fragment="menu">
+    <div class ="sidenav">
+        <a href ="file:///C:/Users/mathe/Documents/CPUT%202021/PROJ/TERM%203/WEBSITE/Trucker-Profile.html">
+            <img src ="/images/System Logo FINAL.jpeg" width =200px height =200px>
+        </a>
+        <br/>
+        <br/>
+        <a th:href="@{/Trucker-Profile}">
+            <button onclick ="Trucker-Profile.html" class ="buttonMenuWithUndercategory"><h3>Profile</h3></button>
+        </a>
+        <br/>
+        <br/>
+        <br/>
+        <button onclick="JobListings_Link()" class="buttonMenuWithUndercategory"><h3>Job Listings</h3></a></button>
+        <br/>
+        <br/>
+        <br/>
+        <a th:href="@{/review-form}">
+            <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Reviews</h3></button>
+        </a>
+        <br/>
+        <br/>
+        <br/>
+        <a th:href="@{/profile}">
+            <button onclick="Live Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Sign in</h3></button>
+        </a>
 
-    <button onclick ="Emergency-Service_Link()" class = "emergency_button"><h3>EMERGENCY SERVICE</H3></a></button>
-</div>
+        <button onclick ="Emergency-Service_Link()" class = "emergency_button"><h3>EMERGENCY SERVICE</H3></a></button>
+    </div>
 
     <div class ="main">
 
@@ -248,7 +334,7 @@ p {
     </div>
 
 
-<a href="review_form.html">
+<a href="review-form.html">
     <button class="button">Write a Review</button>
 </a>
 
@@ -282,11 +368,6 @@ p {
     <label class="star-4" for="star_b-4">4</label>
     <input type="radio" name="star_b" class="star-5" id="star_b-5" />
     <label class="star-5" for="star_b-5">5</label>
-
-
-
-
-
 </div>
 
 <p>Customer Service</p>
@@ -330,20 +411,22 @@ p {
     <input type="radio" name="star_e" class="star-5" id="star_e-5" />
     <label class="star-5" for="star_e-5">5</label>
 </div>
-
-<div class="user-profile">
-    <img src="../images/user-profile.png">
-</div>
+    <div class="user-profile">
+        <img src="../images/user-profile.png">
+    </div>
 <p class="six">John Moses</p>
 <p class="seven">EC,SA</p>
 <p class="eight">Owner/Member</p>
 <p class="nine"><b>“Easy program, affordable”</b></p>
 <p class="ten">
-    <b>Overall:</b>Does everything I need to get done and stay on top <br>of our business<br> <b>Pros: </b>Complete, affordable
-    <br><b>Cons:</b>After learning it I liked the software. It integrated with <br>other apps that were offered.<br></p>
-
-
-
+      <b>Overall:</b> The program is very affordable--changed <br>from another program to this one and have found <br> no problems with the calculations.
+        The program is mostly<br> user friendly. I don't find it to be put together logically for me.<br>I feel
+        like I must go through a lot of gyrations to get to the report <br>that I need.
+        Sometimes things are promised to be completed in the<br> applications that aren't delivered when they are promised.
+        There is <br>sometimes a problem with response --promises to call and then we have <br> to make the call again because there is no response.
+        When you do call,<br>
+        the people are all friendly and try to be helpful.</p></p>
+</div>
 </body>
 
 </html>
