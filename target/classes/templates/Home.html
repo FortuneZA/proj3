@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>profile</title>
-    <script th:src="@{/js/Trucker-Profile.js}"></script>
-    <link rel="stylesheet" th:href="@{/css/Trucker-Profile.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
     <style>
-		   body{
-		   font-family:"Lato,sans-serif;
-		   }
+		   body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* Full height */
+  height: 100%;
+  width: 90%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float:right;
+}
 
 		   .sidenav{
 		   height: 100% ;
@@ -270,113 +282,9 @@ position:relative;
 </head>
 
 <body>
+<div>
+    <img class="bg" th:src  ="@{/images/night road.png}"></img>
 <div th:replace="nav :: menu"></div>
-
-<div class ="main">
-    <img class="main_image" th:src ="@{/images/night road.png}">
-
-    <a th:href ="@{/sign-out}">
-        <img class ="settings_icon" th:src ="@{/images/gear.png}">
-    </a>
-
-    <img class ="profile_icon" th:src ="@{/images/profile.png}">
-
-    <br/>
-    <br/>
-    <br/>
-
 </div>
-
-<div class ="bottom_div">
-    <h1 style="display:flex;
-           justify-content:center;"
-        th:text ="${company.cName}"></h1>
-    <div class="company-name">
-        <br>
-        <button onclick="job()" class="btn" style="margin-left: 10%;">Post</button><br><br><br>
-        <button class="btn" style="margin-left: 10%;">View</button><br><br><br>
-        <button onclick="edit()" class="btn" style="margin-left: 10%;">Edit</button><br><br><br>
-    </div>
-
-    <div class="company-info">
-        <h1>Company Information</h1>
-        <h2>Location</h2>
-        <p th:text ="${company.location}"></p>
-        <h2>Description</h2>
-        <p th:text ="${company.description}"></p>
-        <h2>Contact Info</h2>
-        <p th:text ="${company.contactInfo}"></p>
-    </div>
-</div>
-
-<!--edit form-->
-<form th:action="@{/process_register}" method="post" th:object="${company}">
-<div id ="edit-container" class="container">
-
-    <div class="form">
-        <h3 style="text-align: center;">Edit Company Info:</h3>
-
-
-        <div class="field">
-            <label for="companyName">Comapny name:</label>
-            <input type="text" id="companyName" name="companyName" value="" th:field="*{cName}">
-
-
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="fname" value="" th:field="*{password}">
-
-
-
-            <label for="Location">Location:</label>
-            <input type="text" id="location" name="fname" value="" th:field="*{location}">
-
-
-            <label for="Description">Description:</label>
-            <input type="text" id="description" name="fname" value="" th:field="*{description}">
-
-
-
-            <label for="ContactInfo">Contact Info:</label>
-            <input type="text" id="contactInfo" name="fname" value="" th:field="*{contactInfo}">
-        </div>
-        <br><br><br><br><br><br>
-        <button type="submit" id="confirm-edit" class="btn">Confirm</button>
-    </div>
-</div>
-</form>
-
-<!--job form-->
-<form th:action="@{/post-job}" method="post" th:object="${joblist}">
-    <div id ="job-container" class="container">
-        <div class="form">
-            <h3 style="text-align: center;">Post Job:</h3>
-
-
-        <div class="field">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="" th:field="*{name}">
-
-
-
-            <label for="city">city:</label>
-            <input type="password" id="city" name="city" value="" th:field="*{city}">
-
-
-
-            <label for="endDate">Date:</label>
-            <input type="text" id="endDate" name="endDate" value="" th:field="*{endDate}">
-
-
-            <label for="jobType">Type:</label>
-            <input type="text" id="jobType" name="jobType" value="" th:field="*{jobType}">
-
-        </div>
-        <br><br><br><br><br><br>
-        <button type="submit" class="btn">Confirm</button>
-        </div>
-    </div>
-    </div>
-</form>
 </body>
 </html>

@@ -9,4 +9,7 @@ import org.springframework.stereotype.Repository;
 @EnableAutoConfiguration
 @Repository
 public interface CompaniesRepository extends JpaRepository<Companies,Long> {
+    Companies findBycName(String cName);
+    Boolean existsBycName(String cName);
+    Boolean existsBypassword(String password);
 }
