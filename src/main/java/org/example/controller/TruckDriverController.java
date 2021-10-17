@@ -15,17 +15,17 @@ public class TruckDriverController {
     @Autowired
     private iTruckDriverRepository repository;
 
-    @GetMapping("/TruckerProfile")
+    @GetMapping("/Trucker-Profile")
     public String view(Model model){
         long idno = 2;
         model.addAttribute("truck driver",repository);
-        return "trucker-profile";
+        return "Trucker-Profile";
     }
     @PostMapping("/TruckerProfile")
     public String processProfile(TruckDriver driver){
         driver.setId(1);
         repository.save(driver);
-        return "TruckerProfile";
+        return "Trucker-Profile";
     }
 
 }
