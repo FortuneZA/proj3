@@ -5,7 +5,7 @@ import org.example.entities.Reviews;
 import org.example.entities.User;
 import org.example.repository.CompaniesRepository;
 import org.example.repository.ReviewsRepository;
-import org.example.repository.UsersRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
