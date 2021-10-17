@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:fragment="menu">
+<div class ="sidenav">
+    <a href ="file:///C:/Users/mathe/Documents/CPUT%202021/PROJ/TERM%203/WEBSITE/Trucker-Profile.html">
+        <img th:src ="@{/images/System Logo FINAL.jpeg}" width =200px height =200px>
+    </a>
+    <br/>
+    <br/>
+    <a th:href="@{/profile}">
+    <button onclick ="Trucker-Profile_Link()" class ="buttonMenuWithUndercategory"><h3>Profile</h3></button>
+    </a>
+    <br/>
+    <br/>
+    <br/>
+    <button onclick="JobListings_Link()" class="buttonMenuWithUndercategory"><h3>Job Listings</h3></a></button>
+    <br/>
+    <br/>
+    <br/>
+    <a th:href="@{/review-form}">
+    <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Reviews</h3></button>
+    </a>
+    <br/>
+    <br/>
+    <br/>
+    <a th:href="@{/profile}">
+    <button onclick="Live Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Sign in</h3></button>
+    </a>
+
+    <button onclick ="Emergency-Service_Link()" class = "emergency_button"><h3>EMERGENCY SERVICE</H3></a></button>
+</div>
+</div>
+</body>
+</html>

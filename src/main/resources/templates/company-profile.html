@@ -270,67 +270,20 @@ position:relative;
 </head>
 
 <body>
-<div class ="sidenav">
-    <a href ="file:///C:/Users/mathe/Documents/CPUT%202021/PROJ/TERM%203/WEBSITE/Trucker-Profile.html">
-        <img th:src ="@{/images/System Logo FINAL.jpeg}" width =200px height =200px>
-    </a>
-    <br/>
-    <br/>
-    <button onclick ="Trucker-Profile_Link()" class ="buttonMenuWithUndercategory"><h3>Profile</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick="JobListings_Link()" class="buttonMenuWithUndercategory"><h3>Job Listings</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Navigation</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <button onclick="Live Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Live Tracking</h3></a></button>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <button onclick ="Emergency-Service_Link()" class = "emergency_button"><h3>EMERGENCY SERVICE</H3></a></button>
-</div>
+<div th:replace="nav :: menu"></div>
 
 <div class ="main">
     <img class="main_image" th:src ="@{/images/night road.png}">
 
-    <a href ="">
-        <img class ="bell_icon" th:src ="@{/images/notifications.png}">
-    </a>
-
-    <a href ="">
+    <a th:href ="@{/sign-out}">
         <img class ="settings_icon" th:src ="@{/images/gear.png}">
     </a>
 
     <img class ="profile_icon" th:src ="@{/images/profile.png}">
 
-    <p class ="driver_name"><B>Mathew Fortuin</B></P>
     <br/>
     <br/>
     <br/>
-
-    <p class ="Online"><b>Online: </b></p>
-
-    <div class = "switch_div">
-
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-
-    </div>
 
 </div>
 
@@ -396,6 +349,10 @@ position:relative;
 <!--job form-->
 <form th:action="@{/post-job}" method="post" th:object="${joblist}">
     <div id ="job-container" class="container">
+        <div class="form">
+            <h3 style="text-align: center;">Post Job:</h3>
+
+
         <div class="field">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="" th:field="*{name}">
@@ -417,6 +374,7 @@ position:relative;
         </div>
         <br><br><br><br><br><br>
         <button type="submit" class="btn">Confirm</button>
+        </div>
     </div>
     </div>
 </form>

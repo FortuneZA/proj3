@@ -29,6 +29,12 @@ public class AppController {
     TruckDriver tUser;
     private CompaniesRepository repository2;
 
+    @GetMapping("/")
+    public String home()
+    {
+        return "Home";
+    }
+
     @GetMapping("/company-profile")
     public String view(Model model, Model model2){
             JobList jobList = new JobList();
