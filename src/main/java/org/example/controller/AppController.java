@@ -44,9 +44,11 @@ public class AppController {
     }
 
     @GetMapping("/trucker-profile")
-    public String truckerProfile()
+    public String view(Model model)
     {
-        return "Trucker-Profile";
+        TruckDriver driver = new TruckDriver();
+        model.addAttribute("driver",repository.getById(driver.getId()));
+        return "trucker-profile";
     }
 
     @GetMapping("/profile")
