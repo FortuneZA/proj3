@@ -315,6 +315,136 @@ font-family: Arial, Helvetica, sans;
             height:300px;
             color: #E0E1E4;
         }
+
+        .New_driver{
+            position: absolute;
+            background-color: #E0E1E4;
+            font-family:Arial;
+            color: black;
+            border-radius: 15%;
+            border-color: transparent;
+            width: 100px;
+            height: 50px;
+            top:40%;
+            left:2%;
+        }
+        .Delete_driver{
+            position: absolute;
+            background-color: #E0E1E4;
+            font-family:Arial;
+            color: black;
+            border-radius: 15%;
+            border-color: transparent;
+            width: 100px;
+            height: 50px;
+            top:60%;
+            left:2%;
+        }
+
+        .Edit_driver{
+            position: absolute;
+            background-color: #E0E1E4;
+            font-family:Arial;
+            color: black;
+            border-radius: 15%;
+            border-color: transparent;
+            width: 100px;
+            height: 50px;
+            top:80%;
+            left:2%;
+        }
+
+        .New_driver:hover{
+         background-color: #249225;
+        }
+
+        .Delete_driver:hover{
+
+            background-color:#FF0000;
+
+        }
+
+        .Edit_driver:hover{
+
+            background-color:#464850;
+
+        }
+        {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+
+        .form-popup {
+            display: none;
+            position: fixed;
+            top:10%;
+            left:20%;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+            height:200px;
+        }
+        form-popup2{
+            display: none;
+            position: fixed;
+            top:40%;
+            left:20%;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+            height:500px;
+        }
+
+
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+
+
+        .form-container .cancel {
+            background-color: red;
+        }
+
+
+        .form-container .btn:hover, .open-button:hover {
+            opacity: 1;
+
     </style>
 
 </head>
@@ -381,6 +511,51 @@ font-family: Arial, Helvetica, sans;
 
 </div>
     <p class ="Online"><b>Online: </b></p>
+
+<button onclick="openForm()" class ="New_driver">New Driver</button>
+    <button onclick="delete_driver()" class ="Delete_driver">Delete Driver</button>
+    <button onclick="" class ="Edit_driver">Edit Driver</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>New Driver</h1>
+
+            <label for="text"><b>Identification Number</b></label>
+            <input type="text" placeholder=ID#" name="name" required>
+
+<!--            <label for="text"><b>Contact #</b></label>-->
+<!--            <input type="text" placeholder="Enter #" name="number" required>-->
+
+<!--            <label for="text"><b>Address</b></label>-->
+<!--            <input type="text" placeholder="Enter address" name="address" required>-->
+
+
+
+            <button type="submit" class="btn">Create</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+
+<!--    <div class="form-popup2" id="myForm2">-->
+<!--        <form action="/action_page.php" class="form-container">-->
+<!--            <h1>Edit Driver</h1>-->
+
+<!--            <label for="text"><b>Name</b></label>-->
+<!--            <input type="text" value="John" name="name" required>-->
+
+<!--            &lt;!&ndash;            <label for="text"><b>Contact #</b></label>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <input type="text" placeholder="Enter #" name="number" required>&ndash;&gt;-->
+
+<!--            &lt;!&ndash;            <label for="text"><b>Address</b></label>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <input type="text" placeholder="Enter address" name="address" required>&ndash;&gt;-->
+
+
+
+<!--            <button type="submit" class="btn">Create</button>-->
+<!--            <button type="button" class="btn cancel" onclick="closeForm2()">Cancel</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
 
     <div class = "switch_div">
 
@@ -497,7 +672,30 @@ font-family: Arial, Helvetica, sans;
 
 </div>
 
+<script type="text/javascript">
 
+
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+        function closeForm() {
+        document.getElementById("myForm").style.display = "NONE";
+    }
+        function openForm2() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm2() {
+            document.getElementById("myForm").style.display = "NONE";
+        }
+
+    function delete_driver(){
+      window.confirm("Are you sure you want to delete current driver ?");
+    }
+
+
+</script>
 
 </body>
 

@@ -6,65 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="trucker-reviews.css">
 <style>
-    * {
-    margin: 0;
-    padding: 0;
+  body{
+		   font-family:"Lato,sans-serif;
+		   }
+
+		.sidenav{
+height: 100% ;
+width: 200px;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #1870d5;
+overflow-x: hidden;
+padding-top:20px;
+float:left;
 }
 
-
-
-ul {
-    float: right;
-    list-style-type: none;
-    margin-top: 25px;
+.sidenav default{
+padding:6px 8px 6px 16px;
+font-size:25px;
+color:#818181;
+display:block;
+border-radius: 50%;
 }
 
-ul li {
-    display: inline-block;
+.sidenav deafult:hover {color:#FDFCFC;}
+.buttonMenu{
+	background-color: #464850;
+	border: none;
+	border-bottom: 1px solid lightgrey;
+	color: lightgrey;
+	text-align: left;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.2s;
+	font-family: Arial;
+	width: 200px;
+	height: 50 px;
 }
 
-ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 20px;
-    border: 1px solid black;
+.buttonMenu:hover{
+	background-color:grey;
+	color: #FDFCFC;
 }
 
-ul li a:hover {
-    background-color: grey;
-    color: navy;
-    padding: 5px 20px;
-    border: 1px solid white;
-    transition: 0.6s ease;
+.buttonMenuWithUndercategory{
+	 background-color: #1870d5;
+  border: none;
+  border-bottom: 1px dashed lightgrey;
+  color: black;
+  text-align: centre;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 50px;
+  border-radius:5%;
 }
 
-ul li.active a {
-    background-color: grey;
-    color: navy;
+.buttonMenuWithUndercategory:hover{
+	background-color:#E0E1E4;
+	color:#	black;
 }
 
-.logo img {
-    float: left;
-    width: 200px;
-    height: auto;
-    transform: translate(-160%, -10%);
+.buttonSecondMenu {
+  background-color: #464850;
+  border: none;
+  border-bottom: 1px dashed lightgrey;
+  color: lightgrey;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 30px;
 }
 
-
-.main {
-    max-width: 990px;
-    margin: auto;
+.buttonSecondMenu:hover {
+  background-color: grey;
+  color: #FDFCFC;
 }
 
+.buttonLastSecondMenu {
+  background-color: #464850;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  color: lightgrey;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 30px;
+}
+
+.buttonLastSecondMenu:hover {
+  background-color: grey;
+  color: #FDFCFC;
+}
+.buttonActivMenu {
+  background-color: #797c88;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  color: lightgrey;
+  text-align: left;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  width: 200px;
+  height: 50px;
+}
+
+.emergency_button{
+  position:absolute;
+  background-color: #FF0000;
+  border: none;
+  color: lightgrey;
+  text-align: centre;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  font-family:Arial;
+  left:5px;
+  top:750px;
+  width: 190px;
+  height: 150px;
+  border-radius:25%;
+}
+
+<!--		   .main{-->
+<!--		   position:relative;-->
+<!--		   width: 90%;-->
+<!--		   height: 450px;-->
+<!--		   position: fixed;-->
+<!--		   background-color: black;-->
+<!--		   }-->
+
+<!--		   .main_image{-->
+<!--		    position: relative;-->
+<!--			height: 450px;-->
+<!--			width:100%;-->
+<!--			top:0;-->
+<!--			left:0;-->
+<!--		   }-->
 
 h1 {
     color: black;
     font-size: 60px;
     position: absolute;
     text-align: center;
-    transform: translate(150%, 40%);
-
-
+    transform: translate(120%, 30%);
 }
 
 h2 {
@@ -72,18 +168,20 @@ h2 {
     font-size: 30px;
     position: absolute;
     text-align: center;
-    transform: translate(188%, 600%);
-
-
+    transform: translate(141%, 600%);
 }
 
-
-p {
-    color: black;
-    font-size: 22px;
-    transform: translate(28%,170%);
-
+.rectangle {
+    height: 250px;
+    width: 100%;
+    background-size: 10%;
+    background-color: #1870d5;
+    padding: 10px;
+    position: relative;
+    top: 82px;
+    border-radius: 3%;
 }
+
 .button {
     font-family: Arial;
     border: none;
@@ -96,78 +194,60 @@ p {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15%;
-    transform: translate(650%, -150%);
+    transform: translate(650%, -100%);
     background-color: #FF0000;
-
   }
+.user-profile {
+    width: 200px;
+    height: auto;
+    transform: translate(110%,-105%);
+}
+p {
+    color: black;
+    font-size: 22px;
+    transform: translate(35%,260%);
 
-.one{
+}
+
+.six{
     color: #BEBEBE;
     font-size: 22px;
     font-weight: bold;
     font-style: italic;
-    transform: translate(13%,-600%);
+    transform: translate(18%,-900%);
 }
-.two{
+.seven{
     color: #BEBEBE;
     font-size: 22px;
     font-weight: bold;
     font-style: italic;
-    transform: translate(13%,-550%);
+    transform: translate(18%,-890%);
 }
-.three{
+.eight{
     color: #BEBEBE;
     font-size: 16px;
-    transform: translate(13%,-450%);
+    transform: translate(18%,-1290%);
 }
-.four{
+.nine{
     color: black;
     font-size: 24px;
     text-align: right;
-    transform: translate(-20%,-950%);
+    transform: translate(-15%,-2200%);
 }
 
-.five{
+ .ten{
     color: black;
     font-size: 18px;
-    text-align: left;
-    text-justify: auto;
+    text-align: justify;
 	width:100%;
-    transform: translate(63%,-350%);
-}
-
-.rectangle {
-    height: 250px;
-    width: 100%;
-    background-size: 10%;
-    background-color: #1870d5;
-    padding: 10px;
-    position: relative;
-    top: 82px;
-    border-radius: 3%;
-
-
-}
-.profile {
-    float: left;
-    width: 200px;
-    height: auto;
-    transform: translate(-250%, 180%);
-}
-
-
-
-
-body {
-    background-color: white;
-}
+    transform: translate(66%,-285%);
+    }
 
 .rate {
     margin: auto;
-
-    width: 10%;
+    width: 30%;
     height: 0px;
-    padding: 10px;
+    padding: -80px;
     position: relative;
 }
 
@@ -208,37 +288,55 @@ body {
     color: #c59b08;
 }
 
-
-
 </style>
-
-    <div class="main">
-        <div class="logo">
-            <a href="home.html"><img src="Logo2.png"></a>
-
-        </div>
-    </div>
-
-    <div class="profile">
-        <img src = "../resources/static/images/user-profile.png">
-
-    </div>
-
-    <div class="rectangle">
-        <div class="crf__auw75d-5 hgXdqq"></div>
-        <h1>Logi Truck Reviews</h1>
-        <h2>Logi truck ratings</h2>
-    </div>
 </head>
 
 <body>
+<div th:fragment="menu">
+    <div class ="sidenav">
+        <a href ="file:///C:/Users/mathe/Documents/CPUT%202021/PROJ/TERM%203/WEBSITE/Trucker-Profile.html">
+            <img src ="/images/System Logo FINAL.jpeg" width =200px height =200px>
+        </a>
+        <br/>
+        <br/>
+        <a th:href="@{/Trucker-Profile}">
+            <button onclick ="Trucker-Profile.html" class ="buttonMenuWithUndercategory"><h3>Profile</h3></button>
+        </a>
+        <br/>
+        <br/>
+        <br/>
+        <button onclick="JobListings_Link()" class="buttonMenuWithUndercategory"><h3>Job Listings</h3></a></button>
+        <br/>
+        <br/>
+        <br/>
+        <a th:href="@{/review-form}">
+            <button onclick="Navigation_Link()" class="buttonMenuWithUndercategory"><h3>Reviews</h3></button>
+        </a>
+        <br/>
+        <br/>
+        <br/>
+        <a th:href="@{/profile}">
+            <button onclick="Live Tracking_Link()" class="buttonMenuWithUndercategory"><h3>Sign in</h3></button>
+        </a>
 
-<a href="review_form.html">
+        <button onclick ="Emergency-Service_Link()" class = "emergency_button"><h3>EMERGENCY SERVICE</H3></a></button>
+    </div>
+
+    <div class ="main">
+
+        <div class="rectangle">
+<!--            <div class="crf__auw75d-5 hgXdqq"></div>-->
+
+            <h1>Logi Truck Reviews</h1>
+            <h2>Logi truck ratings</h2>
+        </div>
+<!--        <img class="main_image" src="../images/night road.png">-->
+    </div>
+
+
+<a href="review-form.html">
     <button class="button">Write a Review</button>
 </a>
-
-</div>
-</div>
 
 <p>Overall use</p>
 
@@ -270,11 +368,6 @@ body {
     <label class="star-4" for="star_b-4">4</label>
     <input type="radio" name="star_b" class="star-5" id="star_b-5" />
     <label class="star-5" for="star_b-5">5</label>
-
-
-
-
-
 </div>
 
 <p>Customer Service</p>
@@ -291,7 +384,7 @@ body {
     <label class="star-5" for="star_c-5">5</label>
 </div>
 
-<p>Fetuares</p>
+<p>Features</p>
 <div class="rate">
     <input type="radio" name="star_d" class="star-1" id="star_d-1" />
     <label class="star-1" for="star_d-1">1</label>
@@ -318,18 +411,22 @@ body {
     <input type="radio" name="star_e" class="star-5" id="star_e-5" />
     <label class="star-5" for="star_e-5">5</label>
 </div>
-
-
-<p class="one">John Moses</p>
-<p class="two">EC,SA</p>
-<p class="three">Owner/Member</p>
-<p class="four"><b>“Easy program, affordable”</b></p>
-<p class="five">
-    <b>Overall:</b>Does everything I need to get done and stay on top of our business<br> <b>Pros: </b>Complete, affordable
-    <br><b>Pros:</b>After learning it I liked the software. It integrated with other apps that were offered.<br>
-
-
-
+    <div class="user-profile">
+        <img src="../images/user-profile.png">
+    </div>
+<p class="six">John Moses</p>
+<p class="seven">EC,SA</p>
+<p class="eight">Owner/Member</p>
+<p class="nine"><b>“Easy program, affordable”</b></p>
+<p class="ten">
+      <b>Overall:</b> The program is very affordable--changed <br>from another program to this one and have found <br> no problems with the calculations.
+        The program is mostly<br> user friendly. I don't find it to be put together logically for me.<br>I feel
+        like I must go through a lot of gyrations to get to the report <br>that I need.
+        Sometimes things are promised to be completed in the<br> applications that aren't delivered when they are promised.
+        There is <br>sometimes a problem with response --promises to call and then we have <br> to make the call again because there is no response.
+        When you do call,<br>
+        the people are all friendly and try to be helpful.</p></p>
+</div>
 </body>
 
 </html>
