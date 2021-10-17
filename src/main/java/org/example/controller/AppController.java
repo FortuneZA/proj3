@@ -43,12 +43,12 @@ public class AppController {
             return "company-profile";
     }
 
-    @GetMapping("/trucker-profile")
+    @GetMapping("/TruckerProfile")
     public String view(Model model)
     {
         TruckDriver driver = new TruckDriver();
         model.addAttribute("driver",repository.getById(driver.getId()));
-        return "trucker-profile";
+        return "TruckerProfile";
     }
 
     @GetMapping("/profile")
